@@ -36,7 +36,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build && gh-pages -d public -b master -r https://$GITHUB_TOKEN@github.com/proceduretech/proceduretech.github.i.git"
+    "deploy": "gatsby build && gh-pages -d public -b master -r https://$GITHUB_TOKEN@github.com/proceduretech/proceduretech.github.io.git"
   },
   "repository": {
     "type": "git",
