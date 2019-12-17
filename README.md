@@ -8,8 +8,8 @@
   Gatsby's default starter
 </h1>
 
-[![Build Status](https://travis-ci.com/proceduretech/proceduretech.github.io.svg?branch=master)](https://travis-ci.com/proceduretech/proceduretech.github.io)
-[![License](https://img.shields.io/github/license/proceduretech/proceduretech.github.io)](https://github.com/proceduretech/proceduretech.github.io/blob/develop/CONTRIBUTING.md)
+[![Build Status](https://travis-ci.com/proceduretech/proceduretech.github.io.svg?branch=develop)](https://travis-ci.com/proceduretech/proceduretech.github.io)
+[![License](https://img.shields.io/github/license/proceduretech/proceduretech.github.io)](https://github.com/proceduretech/proceduretech.github.io/blob/develop/LICENSE)
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
