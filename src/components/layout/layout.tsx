@@ -8,7 +8,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import Header from "./header";
+import Header from "../header/header";
 import "./layout.css";
 
 interface LayoutProps {
