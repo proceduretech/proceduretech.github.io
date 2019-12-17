@@ -1,6 +1,6 @@
 language: node_js
 before_script:
-  - npm install -g gatsby-cli
+  - yarn global add gatsby-cli
 node_js:
   - "10"
 deploy:
