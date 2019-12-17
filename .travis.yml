@@ -1,11 +1,14 @@
 language: node_js
 before_script:
-  - yarn global add gatsby-cli
+- yarn global add gatsby-cli
 node_js:
-  - "10"
+- '10'
 deploy:
   provider: script
   script: yarn run deploy
   skip_cleanup: true
   on:
     branch: develop
+notifications:
+  slack:
+    secure: Aq+N/QcrxZadQx5Vz82+8VkvOFVlTIYIMGKKpHP6qFtcO8A77haxO5lgNZLO/nZ7/VH1/jNxuEMdDt472FxuhqnAgGAVkMX0J1GM4ABcQf7zMd8nqnjs6fBwJOd6P5DR42o1eNZlDKqaH61yvV406TWm8yD1vRTn+S2zCcudr9c0nKb9BbtxCc59i1o7ZKWM7/YsrwM5ZNfF2UQDNZOurpY/R/LiOCpUQPEKPAGNEFqVm1ab9tN7MxIUnXLX3sBfq/McTCKaSXZ+dPpj4sLLMRrrH3IeduFMC5DHgNgsdRtWJlH4htAmA8cTupnOKiUFD7OErDQ9kQoSpYD/e5kKnfqVAtS1zpQMgw+t96XBcqWRUfgYz3s2+tkWBKwXQMedVUF0dIAioXeJI+nDh7LXkFKuDOCuskqY7YuJ711CqzPTACytBUKMaNRW0mMdVqVNxvtfFKTF56D1ZU1Nu1UyONRdUayNXQIPCCmwrEAMo7ZZ3TORmAZ6ZDDOxXW6VOw7QvCfTAwka+s00RCUhkzKFRHtIoMI0HHfw7/lFCv32IGf6lpdCxsgv2MdFQKBa9KZzyH3644NqzOp0QQs+P3EFweCE+HrQi9NXXZVylSXF1HyDE66LfP27jM1vu67aDwK4yLUOt0zGpnBpSi0uHN17ydguGVQYWEMJD7B6/gm5DU=
