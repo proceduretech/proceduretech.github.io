@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 
 interface HeaderProps {
-  siteTitle: string;
+  siteTitle?: string;
 }
 
 const Header = ({ siteTitle }: HeaderProps) => (
@@ -33,5 +33,9 @@ const Header = ({ siteTitle }: HeaderProps) => (
     </div>
   </header>
 );
+
+Header.defaultProps = {
+  siteTitle: ``,
+};
 
 export default Header;
