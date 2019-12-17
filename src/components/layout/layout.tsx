@@ -9,6 +9,8 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "../header/header";
+import Footer from "../footer/footer";
+
 import "./layout.css";
 
 interface LayoutProps {
@@ -38,12 +40,8 @@ const Layout = ({ children }: LayoutProps) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
+      <Footer />
     </>
   );
 };
