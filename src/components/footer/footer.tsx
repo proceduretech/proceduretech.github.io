@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Footer = () => (
   <footer
@@ -11,8 +11,10 @@ const Footer = () => (
   >
     © {new Date().getFullYear()}, Built with
     {` `}
-    <a href="https://www.gatsbyjs.org">Gatsby</a>
+    <a href="https://www.procedure.tech" target="_blank">
+      asdfasd
+    </a>
   </footer>
-);
+)
 
-export default Footer;
+export default Footer
