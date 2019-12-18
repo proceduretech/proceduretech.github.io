@@ -5,14 +5,16 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header";
-import "./layout.css";
+import Header from "../header/header"
+import Footer from "../footer/footer"
+
+import "./layout.scss"
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const Layout = ({ children }: LayoutProps) => {
@@ -24,7 +26,7 @@ const Layout = ({ children }: LayoutProps) => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <>
@@ -38,14 +40,10 @@ const Layout = ({ children }: LayoutProps) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
+      <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
