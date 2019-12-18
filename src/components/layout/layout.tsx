@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "../header/header"
 import Footer from "../footer/footer"
 
-import "./layout.css"
+import "./layout.scss"
 
 interface LayoutProps {
   children: React.ReactNode

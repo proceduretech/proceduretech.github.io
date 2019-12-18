@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Procedure <info@theprocedure.in>",
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.36",
     "gatsby-plugin-manifest": "^2.2.33",
