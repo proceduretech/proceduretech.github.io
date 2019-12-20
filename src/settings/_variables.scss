@@ -1,4 +1,6 @@
 $primary: #5963fc;
+$backgroud-dark: #1d223a;
+$backgroud-light: #2b2e51;
 $accent: #00f69b;
 
 $theme-colors: ();
@@ -6,6 +8,8 @@ $theme-colors: ();
 $theme-colors: map-merge(
   (
     "accent": $accent,
+    "backgroud-dark": $backgroud-dark,
+    "backgroud-light": $backgroud-light,
   ),
   $theme-colors
 );
