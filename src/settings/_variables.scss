@@ -1,2 +1,11 @@
-$primary: #5963fc !default;
-$accent: #00f69b !default;
+$primary: #5963fc;
+$accent: #00f69b;
+
+$theme-colors: ();
+
+$theme-colors: map-merge(
+  (
+    "accent": $accent,
+  ),
+  $theme-colors
+);
