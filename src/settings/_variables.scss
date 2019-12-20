@@ -1,9 +1,9 @@
-$primary: #5963fc;
-$backgroud-dark: #1d223a;
-$backgroud-light: #2b2e51;
-$accent: #00f69b;
+$primary: #5963fc !default;
+$backgroud-dark: #1d223a !default;
+$backgroud-light: #2b2e51 !default;
+$accent: #00f69b !default;
 
-$theme-colors: ();
+$theme-colors: () !default;
 
 $theme-colors: map-merge(
   (
