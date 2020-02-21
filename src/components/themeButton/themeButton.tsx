@@ -11,7 +11,7 @@ interface IButtonProps {
 }
 
 const ThemeButton = ({ title, onClick, classes, type }: IButtonProps) => {
-  let className = "py-1 px-4 font-weight-bold rounded-sm"
+  let className = "btn-secondary py-1 px-4 font-weight-bold rounded-sm"
   if (classes) {
     className = classes + " " + className
   }

@@ -3,6 +3,7 @@ import funstonTheme from "typography-theme-funston"
 
 const typography = new Typography({
   baseFontSize: "18px",
+  bodyColor: "#555874",
   baseLineHeight: 1.666,
   headerFontFamily: [
     "Roboto",
@@ -13,7 +14,7 @@ const typography = new Typography({
     "Arial",
     "sans-serif",
   ],
-  bodyFontFamily: ["Roboto", "Georgia", "serif"],
+  bodyFontFamily: ["Roboto"],
 })
 
 export default typography
