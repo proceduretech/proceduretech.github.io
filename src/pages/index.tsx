@@ -7,7 +7,7 @@ import SEO from "../components/seo/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Home" description="Home page for procedure tech" />
     <h1
       className="text-accent"
       styles={{ backgroundColor: "color-background-dark" }}

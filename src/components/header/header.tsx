@@ -8,7 +8,7 @@ interface HeaderProps {
 }
 
 const Header = ({ siteTitle }: HeaderProps) => (
-  <header className={styles.header}>
+  <header className="bg-backgroud-dark">
     <div
       style={{
         margin: `0 auto`,
