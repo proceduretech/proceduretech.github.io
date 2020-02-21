@@ -7,11 +7,15 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons"
 
 import Header from "../header/header"
 import Footer from "../footer/footer"
 
 import "./layout.scss"
+
+library.add(faChevronCircleRight)
 
 interface LayoutProps {
   children: React.ReactNode

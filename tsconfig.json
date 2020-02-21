@@ -16,5 +16,6 @@
     "jsx": "react"
   },
   "include": ["src"],
-  "exclude": ["node_modules", "public", ".cache"]
+  "exclude": ["node_modules", "public", ".cache"],
+  "files": ["index.d.ts"]
 }
