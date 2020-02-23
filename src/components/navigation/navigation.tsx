@@ -1,17 +1,14 @@
 import React from "react"
 import { Nav } from "react-bootstrap"
 
-interface NavigationItemProps {
+export interface NavigationItemProps {
   name: string
   link: string
 }
 
-const NAV_ITEM: NavigationItemProps[] = [
-  {
-    link: "/team",
-    name: "Team",
-  },
-]
+interface NavigationProps {
+  menuLinks: [NavigationItemProps]
+}
 
 const NavigationItem = (props: NavigationItemProps) => {
   return (
@@ -21,13 +18,13 @@ const NavigationItem = (props: NavigationItemProps) => {
   )
 }
 
-const Navigation = () => {
+const Navigation = ({ menuLinks }: NavigationProps) => {
   return (
-    <Nav activeKey="/team">
-      {NAV_ITEM.map((item, index) => {
-        return <NavigationItem key={index} props={item} />
+    <>
+      {menuLinks.map(link => {
+        return <NavigationItem key={link.name} {...link} />
       })}
-    </Nav>
+    </>
   )
 }
 

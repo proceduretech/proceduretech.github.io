@@ -4,6 +4,12 @@ module.exports = {
     description: `Website for Procedure`,
     author: `@proceduretech`,
     siteUrl: `https://www.procedure.tech/`,
+    menuLinks: [
+      {
+        name: "Team",
+        link: "/team",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,6 +36,7 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

@@ -1,13 +1,16 @@
 import { Link } from "gatsby"
 import React from "react"
 
+import Navigation, { NavigationItemProps } from "../navigation/navigation"
+
 import styles from "./header.module.scss"
 
 interface HeaderProps {
-  siteTitle?: string
+  siteTitle: string
+  menuLinks: [NavigationItemProps]
 }
 
-const Header = ({ siteTitle }: HeaderProps) => (
+const Header = ({ siteTitle, menuLinks }: HeaderProps) => (
   <header className="bg-backgroud-dark">
     <div
       style={{
@@ -27,6 +30,7 @@ const Header = ({ siteTitle }: HeaderProps) => (
           {siteTitle}
         </Link>
       </h1>
+      <Navigation menuLinks={menuLinks} />
     </div>
   </header>
 )
