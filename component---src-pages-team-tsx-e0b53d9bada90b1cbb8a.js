@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{Kxv3:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),c=n.n(a),l=n("Wbzz"),o=n("B7F5"),r=n("z2p8");t.default=function(){return c.a.createElement(o.a,null,c.a.createElement(r.a,{title:"Team"}),c.a.createElement("h1",{style:{fontSize:72}},"Team"),c.a.createElement(l.Link,{to:"/"},"Home"))}}}]);
-//# sourceMappingURL=component---src-pages-team-tsx-e0b53d9bada90b1cbb8a.js.map

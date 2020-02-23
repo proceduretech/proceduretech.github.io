@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{iShf:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),c=n.n(a),o=n("Wbzz"),i=n("B7F5"),l=n("z2p8");t.default=function(){return c.a.createElement(i.a,null,c.a.createElement(l.a,{title:"Contact us"}),c.a.createElement("h1",{style:{fontSize:72}},"Contact us"),c.a.createElement(o.Link,{to:"/"},"Home"))}}}]);
+//# sourceMappingURL=component---src-pages-contact-us-tsx-be2eda798a7613bcced8.js.map
