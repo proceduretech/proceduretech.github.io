@@ -1,13 +1,17 @@
 import React from "react"
-import { Row } from "react-bootstrap"
+import { Row, Container } from "react-bootstrap"
 
-import { PrimaryThemeButton, SecondaryThemeButton } from "../shared/shared"
+import {
+  PrimaryThemeButton,
+  SecondaryThemeButton,
+  IntrinsicProps,
+} from "../shared/shared"
 import ShowcaseCard from "../showcase-card/showcase-card"
 
 import styles from "./home.module.scss"
 
-const Heading = () => {
-  return <h1 className="text-accent">Heading</h1>
+const Heading = ({ className }: IntrinsicProps) => {
+  return <h1 className={`text-white ${className ? className : ""}`}>Heading</h1>
 }
 
 const SubHeading = () => {
@@ -22,10 +26,12 @@ const SubHeading = () => {
 const HeroSection = () => {
   return (
     <div className={styles.hero}>
-      <Heading />
-      <SubHeading />
-      <PrimaryThemeButton>Hire Us</PrimaryThemeButton>
-      <SecondaryThemeButton className="mx-3">Our Work</SecondaryThemeButton>
+      <Container>
+        <Heading />
+        <SubHeading />
+        <PrimaryThemeButton>Hire Us</PrimaryThemeButton>
+        <SecondaryThemeButton className="mx-3">Our Work</SecondaryThemeButton>
+      </Container>
     </div>
   )
 }

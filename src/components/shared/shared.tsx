@@ -1,7 +1,7 @@
 import React from "react"
 import { Button } from "react-bootstrap"
 
-interface IntrinsicProps {
+export interface IntrinsicProps {
   className?: string
   children?: React.ReactNode
 }
