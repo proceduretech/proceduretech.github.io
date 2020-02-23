@@ -1,38 +1,43 @@
 import { Link } from "gatsby"
 import React from "react"
+import { Container, Navbar } from "react-bootstrap"
 
-import Navigation, { NavigationItemProps } from "../navigation/navigation"
+import Navigation, { NavigationProps } from "../navigation/navigation"
 
 import styles from "./header.module.scss"
 
-interface HeaderProps {
+interface NavigationBrandProps {
   siteTitle: string
-  menuLinks: [NavigationItemProps]
 }
 
-const Header = ({ siteTitle, menuLinks }: HeaderProps) => (
-  <header className="bg-backgroud-dark">
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const NavigationBrand = ({ siteTitle }: NavigationBrandProps) => {
+  return (
+    <Navbar.Brand>
+      <Link to="/" className="text-white">
+        {siteTitle}
+      </Link>
+    </Navbar.Brand>
+  )
+}
+
+const NavigationBar = ({
+  siteTitle,
+  menuLinks,
+}: NavigationBrandProps & NavigationProps) => {
+  return (
+    <Navbar variant="dark">
+      <NavigationBrand siteTitle={siteTitle} />
       <Navigation menuLinks={menuLinks} />
-    </div>
-  </header>
+    </Navbar>
+  )
+}
+
+const Header = (props: NavigationBrandProps & NavigationProps) => (
+  <div className="bg-backgroud-dark">
+    <Container>
+      <NavigationBar {...props} />
+    </Container>
+  </div>
 )
 
 Header.defaultProps = {
