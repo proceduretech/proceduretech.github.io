@@ -1,19 +1,15 @@
 import React from "react"
+import { Container } from "react-bootstrap"
 
 const Footer = () => (
-  <footer
-    style={{
-      margin: `0 auto`,
-      maxWidth: 960,
-      padding: `0px 1.0875rem 1.45rem`,
-      paddingTop: 0,
-    }}
-  >
-    © {new Date().getFullYear()}, Built with
-    {` `}
-    <a href="https://www.gatsbyjs.org" target="_blank">
-      Gatsby
-    </a>
+  <footer>
+    <Container>
+      © {new Date().getFullYear()}, Built with
+      {` `}
+      <a href="https://www.gatsbyjs.org" target="_blank">
+        Gatsby
+      </a>
+    </Container>
   </footer>
 )
 

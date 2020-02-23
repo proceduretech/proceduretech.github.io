@@ -1,5 +1,5 @@
 import React from "react"
-import { Row, Container } from "react-bootstrap"
+import { Row, Container, Jumbotron } from "react-bootstrap"
 
 import {
   PrimaryThemeButton,
@@ -27,10 +27,12 @@ const HeroSection = () => {
   return (
     <div className={styles.hero}>
       <Container>
-        <Heading />
-        <SubHeading />
-        <PrimaryThemeButton>Hire Us</PrimaryThemeButton>
-        <SecondaryThemeButton className="mx-3">Our Work</SecondaryThemeButton>
+        <Jumbotron className="bg-transparent">
+          <Heading />
+          <SubHeading />
+          <PrimaryThemeButton>Hire Us</PrimaryThemeButton>
+          <SecondaryThemeButton className="mx-3">Our Work</SecondaryThemeButton>
+        </Jumbotron>
       </Container>
     </div>
   )
