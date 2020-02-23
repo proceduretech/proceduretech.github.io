@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/components/workCard/workCard.module.scss"],"names":["module","exports"],"mappings":"8EACAA,EAAOC,QAAU,CAAC,KAAO,iC","file":"styles-8a6c63b622f9ba12e462.js","sourcesContent":["// extracted by mini-css-extract-plugin\nmodule.exports = {\"card\":\"workCard-module--card--21fz6\"};"],"sourceRoot":""}
