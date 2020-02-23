@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import { Container, Navbar } from "react-bootstrap"
 
+import { DarkBackground } from "../shared/shared"
 import Navigation, { NavigationProps } from "../navigation/navigation"
 
 interface NavigationBrandProps {
@@ -31,11 +32,11 @@ const NavigationBar = ({
 }
 
 const Header = (props: NavigationBrandProps & NavigationProps) => (
-  <div className="bg-backgroud-dark">
+  <DarkBackground>
     <Container>
       <NavigationBar {...props} />
     </Container>
-  </div>
+  </DarkBackground>
 )
 
 Header.defaultProps = {
