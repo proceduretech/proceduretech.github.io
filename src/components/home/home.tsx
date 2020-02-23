@@ -6,15 +6,32 @@ import ShowcaseCard from "../showcase-card/showcase-card"
 
 import styles from "./home.module.scss"
 
-const Home = () => (
-  <div className={styles.hero}>
-    <h1 className="text-accent">Heading</h1>
+const Heading = () => {
+  return <h1 className="text-accent">Heading</h1>
+}
+
+const SubHeading = () => {
+  return (
     <p className="small">
       Subheading - this is a sample text for almost 120 lines Some text that is
       a sub headline
     </p>
-    <PrimaryThemeButton>Hire Us</PrimaryThemeButton>
-    <SecondaryThemeButton className="mx-3">Our Work</SecondaryThemeButton>
+  )
+}
+
+const HeroSection = () => {
+  return (
+    <div className={styles.hero}>
+      <Heading />
+      <SubHeading />
+      <PrimaryThemeButton>Hire Us</PrimaryThemeButton>
+      <SecondaryThemeButton className="mx-3">Our Work</SecondaryThemeButton>
+    </div>
+  )
+}
+
+const WorkSection = () => {
+  return (
     <Row>
       <ShowcaseCard
         image="https://via.placeholder.com/286x250"
@@ -22,7 +39,16 @@ const Home = () => (
         description="Lorem Epsom text. This is a sample description of the project"
       />
     </Row>
-  </div>
-)
+  )
+}
+
+const Home = () => {
+  return (
+    <>
+      <HeroSection />
+      <WorkSection />
+    </>
+  )
+}
 
 export default Home
