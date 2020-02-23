@@ -2,11 +2,12 @@ import React from "react"
 import { TypographyStyle, GoogleFont } from "react-typography"
 import { Row } from "react-bootstrap"
 
+import Typography from "../utils/typography"
+
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo/seo"
 import ThemeButton from "../components/themeButton/themeButton"
-import Typography from "../utils/typography"
-import WorkCard from "../components/workCard/workCard"
+import ShowcaseCard from "../components/showcase-card/showcase-card"
 
 const IndexPage = () => (
   <Layout>
@@ -21,7 +22,7 @@ const IndexPage = () => (
     <ThemeButton title="Hire Us" />
     <ThemeButton title="Our Work" classes="bg-transparent text-accent mx-3" />
     <Row>
-      <WorkCard
+      <ShowcaseCard
         image="https://via.placeholder.com/286x250"
         title="Project title 1 - client name"
         description="Lorem Epsom text. This is a sample description of the project"

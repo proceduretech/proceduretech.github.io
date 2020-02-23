@@ -3,15 +3,15 @@ import { Card, Col } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
 
-import styles from "./workCard.module.scss"
+import styles from "./showcase-card.module.scss"
 
-interface WorkCardProps {
+interface ShowcaseCardProps {
   image: string
   title: string
   description: string
 }
 
-const WorkCard = ({ image, title, description, link }: WorkCardProps) => {
+const ShowcaseCard = ({ image, title, description }: ShowcaseCardProps) => {
   return (
     <Col md={4} className="my-3">
       <Card className={styles.card}>
@@ -35,4 +35,4 @@ const WorkCard = ({ image, title, description, link }: WorkCardProps) => {
   )
 }
 
-export default WorkCard
+export default ShowcaseCard
