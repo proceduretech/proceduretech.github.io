@@ -11,8 +11,8 @@ const Footer = () => (
   >
     © {new Date().getFullYear()}, Built with
     {` `}
-    <a href="https://www.procedure.tech" target="_blank">
-      asdfasd
+    <a href="https://www.gatsbyjs.org" target="_blank">
+      Gatsby
     </a>
   </footer>
 )

@@ -9,6 +9,26 @@ module.exports = {
         name: "Team",
         link: "/team",
       },
+      {
+        name: "Work",
+        link: "/work",
+      },
+      {
+        name: "About us",
+        link: "/about-us",
+      },
+      {
+        name: "Blog",
+        link: "/blog",
+      },
+      {
+        name: "Careers",
+        link: "/careers",
+      },
+      {
+        name: "Contact us",
+        link: "/contact-us",
+      },
     ],
   },
   plugins: [

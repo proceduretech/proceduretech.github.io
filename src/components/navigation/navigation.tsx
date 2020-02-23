@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Nav } from "react-bootstrap"
 
 export interface NavigationItemProps {
@@ -10,10 +11,10 @@ interface NavigationProps {
   menuLinks: [NavigationItemProps]
 }
 
-const NavigationItem = (props: NavigationItemProps) => {
+const NavigationItem = ({ name, link }: NavigationItemProps) => {
   return (
     <Nav.Item>
-      <Nav.Link href={props.link}>{props.name}</Nav.Link>
+      <Link to={link}>{name}</Link>
     </Nav.Item>
   )
 }
