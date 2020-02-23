@@ -4,8 +4,6 @@ import { Container, Navbar } from "react-bootstrap"
 
 import Navigation, { NavigationProps } from "../navigation/navigation"
 
-import styles from "./header.module.scss"
-
 interface NavigationBrandProps {
   siteTitle: string
 }
