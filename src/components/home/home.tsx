@@ -32,7 +32,7 @@ const HeroSection = () => {
           <Heading />
           <SubHeading />
           <PrimaryThemeButton>Hire Us</PrimaryThemeButton>
-          <SecondaryThemeButton className="mx-3">Our Work</SecondaryThemeButton>
+          <SecondaryThemeButton className="ml-3">Our Work</SecondaryThemeButton>
         </Jumbotron>
       </Container>
     </div>
