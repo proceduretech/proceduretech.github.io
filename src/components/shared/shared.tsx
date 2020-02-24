@@ -14,6 +14,14 @@ export const DarkBackground = ({ className, children }: IntrinsicProps) => {
   )
 }
 
+export const LightBackground = ({ className, children }: IntrinsicProps) => {
+  return (
+    <div className={`bg-background-light ${className ? className : ""}`}>
+      {children}
+    </div>
+  )
+}
+
 type ButtonTypes = "button" | "submit" | "reset"
 
 interface ButtonProps {

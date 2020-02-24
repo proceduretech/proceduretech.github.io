@@ -5,6 +5,7 @@ import {
   PrimaryThemeButton,
   SecondaryThemeButton,
   IntrinsicProps,
+  LightBackground,
 } from "../shared/shared"
 import ShowcaseCard from "../showcase-card/showcase-card"
 
@@ -40,13 +41,15 @@ const HeroSection = () => {
 
 const WorkSection = () => {
   return (
-    <Row>
-      <ShowcaseCard
-        image="https://via.placeholder.com/286x250"
-        title="Project title 1 - client name"
-        description="Lorem Epsom text. This is a sample description of the project"
-      />
-    </Row>
+    <LightBackground>
+      <Row>
+        <ShowcaseCard
+          image="https://via.placeholder.com/286x250"
+          title="Project title 1 - client name"
+          description="Lorem Epsom text. This is a sample description of the project"
+        />
+      </Row>
+    </LightBackground>
   )
 }
 
