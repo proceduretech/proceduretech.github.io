@@ -26,7 +26,7 @@ const SubHeading = () => {
 
 const HeroSection = () => {
   return (
-    <div className={styles.hero}>
+    <div className={`${styles.hero} d-flex align-items-center`}>
       <Container>
         <Jumbotron className="bg-transparent">
           <Heading />
