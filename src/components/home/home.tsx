@@ -42,13 +42,11 @@ const HeroSection = () => {
 const WorkSection = () => {
   return (
     <LightBackground>
-      <Row>
-        <ShowcaseCard
-          image="https://via.placeholder.com/286x250"
-          title="Project title 1 - client name"
-          description="Lorem Epsom text. This is a sample description of the project"
-        />
-      </Row>
+      <ShowcaseCard
+        image="https://via.placeholder.com/286x250"
+        title="Project title 1 - client name"
+        description="Lorem Epsom text. This is a sample description of the project"
+      />
     </LightBackground>
   )
 }
