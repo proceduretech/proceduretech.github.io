@@ -13,7 +13,7 @@ interface ShowcaseCardProps {
 
 const ShowcaseCard = ({ image, title, description }: ShowcaseCardProps) => {
   return (
-    <Col md={4} className="my-3">
+    <Col md={4}>
       <Card className={styles.card}>
         <Card.Img variant="top" src={image} />
         <Card.Body>
