@@ -4,8 +4,19 @@ import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import TeamCard from "../components/TeamCard";
 import { DynamicPagePropsType } from "@/app/types";
+import { Metadata } from "next/types";
+import { removeDashAndCapitalize } from "@/utils/utils";
 
 export const dynamicParams = false;
+
+export async function generateMetadata({ params }: DynamicPagePropsType): Promise<Metadata>  {
+  const slug = (await params).slug
+
+  return {
+    title: removeDashAndCapitalize(slug),
+    description: ""
+  };
+}
 
 export async function generateStaticParams() {
   return Object.keys(aboutPageData).map((pageName) => ({

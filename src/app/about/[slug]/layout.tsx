@@ -1,18 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { DynamicPagePropsType } from "@/app/types";
-import { Metadata } from "next/types";
-import { removeDashAndCapitalize } from "@/utils/utils";
-
-export async function generateMetadata({ params }: DynamicPagePropsType): Promise<Metadata>  {
-  const slug = (await params).slug
-
-  return {
-    title: removeDashAndCapitalize(slug),
-    description: ""
-  };
-}
 
 const Layout = ({
   children,
