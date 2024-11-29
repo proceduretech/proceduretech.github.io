@@ -3,6 +3,7 @@ import { aboutPageData } from "@/data";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import TeamCard from "../components/TeamCard";
+import { DynamicPagePropsType } from "@/app/types";
 
 export const dynamicParams = false;
 
@@ -14,9 +15,7 @@ export async function generateStaticParams() {
 
 export default async function Page({
   params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+}: DynamicPagePropsType) {
   const slug = (await params).slug;
   const pageData = aboutPageData[slug];
 

@@ -6,6 +6,9 @@ import { twMerge } from "tailwind-merge";
 import Author from "./components/Author";
 import LeftSection from "./components/LeftSection";
 import RightSection from "./components/RightSection";
+import { DynamicPagePropsType } from "../types";
+import { Metadata } from "next/types";
+import { removeDashAndCapitalize } from "@/utils/utils";
 
 export const dynamicParams = false;
 
@@ -15,11 +18,18 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: DynamicPagePropsType): Promise<Metadata>  {
+  const slug = (await params).slug
+
+  return {
+    title: removeDashAndCapitalize(slug),
+    description: ""
+  };
+}
+
 export default async function Page({
   params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+}: DynamicPagePropsType) {
   const slug = (await params).slug;
   const pageData = blogsPageData[slug];
 

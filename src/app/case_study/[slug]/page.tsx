@@ -8,13 +8,19 @@ import { twMerge } from "tailwind-merge";
 import DownloadForm from "./components/DownloadForm";
 import ContentSection from "./components/ContentSection";
 import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Case Study | Procedure",
-  description: "",
-};
+import { DynamicPagePropsType } from "@/app/types";
+import { removeDashAndCapitalize } from "@/utils/utils";
 
 export const dynamicParams = false;
+
+export async function generateMetadata({ params }: DynamicPagePropsType): Promise<Metadata>  {
+  const slug = (await params).slug
+
+  return {
+    title: removeDashAndCapitalize(slug),
+    description: ""
+  };
+}
 
 export async function generateStaticParams() {
   return Object.keys(caseStudiesData).map((pageName) => ({
@@ -24,9 +30,7 @@ export async function generateStaticParams() {
 
 export default async function Page({
   params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+}: DynamicPagePropsType) {
   const slug = (await params).slug;
   const pageData = caseStudiesData[slug];
 

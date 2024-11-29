@@ -4,7 +4,10 @@ import Header from "@/components/AppLayout/Header";
 import Footer from "@/components/AppLayout/Footer";
 
 export const metadata: Metadata = {
-  title: "Procedure",
+  title: {
+    template: '%s | Procedure',
+    default: 'Home | Procedure', // a default is required when creating a template
+  },
   description: "Think. Build. Measure.",
 };
 

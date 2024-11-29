@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Resources | Procedure",
+  title: "Resources",
   description: "",
 };
 

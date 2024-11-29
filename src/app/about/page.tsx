@@ -9,7 +9,7 @@ import TeamsData from "./components/TeamsData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | Procedure",
+  title: "About",
   description: "",
 };
 

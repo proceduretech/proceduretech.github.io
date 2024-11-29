@@ -4,15 +4,20 @@ import Consultation from "../../../components/Consultation";
 import Pointers from "../../../components/Pointers";
 import { capabilitiesPagesData } from "@/data";
 import RoundedLeftImage from "@/components/RoundedLeftImage";
-
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Capabilities | Procedure",
-  description: "",
-};
+import type { Metadata } from 'next'
+import { DynamicPagePropsType } from "@/app/types";
+import { removeDashAndCapitalize } from "@/utils/utils";
 
 export const dynamicParams = false;
+
+export async function generateMetadata({ params }: DynamicPagePropsType): Promise<Metadata>  {
+  const slug = (await params).slug
+
+  return {
+    title: removeDashAndCapitalize(slug),
+    description: ""
+  };
+}
 
 export async function generateStaticParams() {
   return Object.keys(capabilitiesPagesData).map((pageName) => ({
@@ -22,9 +27,7 @@ export async function generateStaticParams() {
 
 export default async function Page({
   params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+}: DynamicPagePropsType) {
   const slug = (await params).slug;
   const pageData = capabilitiesPagesData[slug];
 

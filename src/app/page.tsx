@@ -4,12 +4,6 @@ import TeamSection from "@/app/components/TeamSection";
 import Link from "next/link";
 import JoinProcedure from "@/components/JoinProcedure";
 import AgileDeliverySection from "./components/AgileDeliverySection";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Home | Procedure",
-  description: "",
-};
 
 export default function Home() {
   return (

@@ -1,7 +1,19 @@
+import { DynamicPagePropsType } from "@/app/types";
 import PageNavbar from "@/components/PageNavbar";
 import { blogsPageData, caseStudiesData } from "@/data";
+import { removeDashAndCapitalize } from "@/utils/utils";
+import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+
+export async function generateMetadata({ params }: DynamicPagePropsType): Promise<Metadata>  {
+  const slug = (await params).slug
+
+  return {
+    title: `${removeDashAndCapitalize(slug)} Tag`,
+    description: ""
+  };
+}
 
 export async function generateStaticParams() {
   const allTags = [

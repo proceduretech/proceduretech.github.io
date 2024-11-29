@@ -7,7 +7,7 @@ import { tabs } from "@/constants/constant";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Case Study | Procedure",
+  title: "Case Study",
   description: "",
 };
 

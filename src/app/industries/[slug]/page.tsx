@@ -5,11 +5,17 @@ import RoundedLeftImage from "@/components/RoundedLeftImage";
 import { industriesPagesData } from "@/data";
 import { twMerge } from "tailwind-merge";
 import { Metadata } from "next";
+import { DynamicPagePropsType } from "@/app/types";
+import { removeDashAndCapitalize } from "@/utils/utils";
 
-export const metadata: Metadata = {
-  title: "Industries | Procedure",
-  description: "",
-};
+export async function generateMetadata({ params }: DynamicPagePropsType): Promise<Metadata>  {
+  const slug = (await params).slug
+
+  return {
+    title: removeDashAndCapitalize(slug),
+    description: ""
+  };
+}
 
 export const dynamicParams = false;
 
@@ -21,9 +27,7 @@ export async function generateStaticParams() {
 
 export default async function Page({
   params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+}: DynamicPagePropsType) {
   const slug = (await params).slug;
   const pageData = industriesPagesData[slug];
 

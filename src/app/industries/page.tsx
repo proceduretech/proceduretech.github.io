@@ -7,7 +7,7 @@ import BackgroundImage from "../../components/PageBackgroundImage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Industries | Procedure",
+  title: "Industries",
   description: "",
 };
 

@@ -5,7 +5,7 @@ import PageBackgroundImage from "@/components/PageBackgroundImage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | Procedure",
+  title: "Contact",
   description: "",
 };
 

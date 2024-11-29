@@ -7,7 +7,7 @@ import CapabilitiesNavigation from "./components/CapablitiesNavigation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Capabilities | Procedure",
+  title: "Capabilities",
   description: "",
 };
 
