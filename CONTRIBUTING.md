@@ -21,4 +21,4 @@ Thank you for your interest in contributing to Procedure Portfolio! This documen
 2. **Create a Pull Request**
    - All PRs must be linked to an issue
    - Link your PR by including "Fixes #123" or "Relates to #123" in the PR description
-   - This helps track the context of changes
+   - This helps track the context of changes.
