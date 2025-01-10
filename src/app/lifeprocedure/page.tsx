@@ -156,38 +156,12 @@ const LifeProcedure = () => {
           </div>
         ))}
       </section>
-      <Pointers
-        title="The Pro State of Mind"
-        pointers={pointerData}
-        eachElementClassName="text-[0.625rem] w-full md:w-[28%] lg:w-[28%] mr-0 md:mr-[5.3%] mb-12 md:mb-[5%]"
-      />
       <section className="mb-28">
-        <div className="container-padding">
-          <h2 className="mb-12">The Pro State of Mind</h2>
-          <div className="flex flex-wrap -mb-[5%]">
-            {pointerData.map((data, index) => (
-              <div
-                key={data.heading}
-                className="w-full md:w-[28%] md:mr-[5.3%] mb-12 md:mb-[5%]"
-              >
-                <h3
-                  className={twMerge(
-                    'text-gray-400 dot text-7xl font-bold mb-2.5',
-                    data.color
-                  )}
-                >
-                  {index + 1}
-                </h3>
-                <h4 className="text-3xl mb-2.5 text-gray-600 font-bold">
-                  {data.heading}
-                </h4>
-                <p className="text-[#212529] text-[0.625rem]">
-                  {data.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Pointers
+          title="The Pro State of Mind"
+          pointers={pointerData}
+          eachElementClassName="text-[0.625rem] w-full md:w-[28%] lg:w-[28%] mr-0 md:mr-[5.3%] mb-12 md:mb-[5%]"
+        />
       </section>
       <section className="mb-28">
         <PhotoSlider photoData={photoData} />
