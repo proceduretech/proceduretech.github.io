@@ -27,8 +27,11 @@ export default function Home() {
               Maximize the value of your business with our precise, insightful
               and agile digital engineering solutions
             </p>
-            <Link className="primary-button bg-white" href="/contact/#consult">
-              Get a Free Consultation
+            <Link
+              className="primary-button primary-button--red bg-white"
+              href="/contact/#consult"
+            >
+              <span>Get a Free Consultation</span>
             </Link>
           </div>
         </div>

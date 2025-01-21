@@ -40,7 +40,10 @@ const TabsSection = ({
             <h3 className="text-4xl/10 tracking-[-0.01875rem] leading-[3.4375rem] mb-7 p-0 max-w-[37.5rem]">
               {tab.description}
             </h3>
-            <Link className="primary-button bg-white" href={tab.href}>
+            <Link
+              className="primary-button primary-button--blue bg-white"
+              href={tab.href}
+            >
               Read
             </Link>
           </TabPanel>

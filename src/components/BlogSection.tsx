@@ -22,7 +22,7 @@ const BlogSection = () => {
           Frontend Performance Testing: Best Practices​
         </h5>
         <Link
-          className="primary-button bg-white"
+          className="primary-button bg-white primary-button--blue"
           href="/frontend-performance-testing-best-practices/"
         >
           Read

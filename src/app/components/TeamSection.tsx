@@ -30,31 +30,28 @@ const TeamSection = () => {
           We are passionate about producing cutting-edge work
         </h2>
         <div className="flex justify-between mb-5">
-          <Link
-            className="text-[1.375rem] tracking-[-0.9px] font-semibold animation-easein-slow shift-to-right flex flex-col md:flex-row items-center"
-            href="/about/#ourstory"
-          >
+          <Link className="nav-link group" href="/about/#ourstory">
             Our Story
-            <div className="bg-[#f0eff2] p-2 rounded-full shadow-md md:ml-5">
-              <ArrowRightIcon className="w-5 h-5 text-red-500" />
+            <div className="nav-link-button">
+              <ArrowRightIcon className="nav-link-icon" />
+              <div className="nav-link-slide nav-link-slide--red"></div>
             </div>
           </Link>
           <Link
-            className="text-[1.375rem] tracking-[-0.9px] font-semibold animation-easein-slow shift-to-right flex flex-col md:flex-row items-center"
+            className="nav-link group"
             href="/lifeprocedure/cultureprocedure/"
           >
             Culture
-            <div className="bg-[#f0eff2] p-2 rounded-full shadow-md md:ml-5">
-              <ArrowRightIcon className="w-5 h-5 text-red-500" />
+            <div className="nav-link-button">
+              <ArrowRightIcon className="nav-link-icon" />
+              <div className="nav-link-slide nav-link-slide--blue"></div>
             </div>
           </Link>
-          <Link
-            className="text-[1.375rem] tracking-[-0.9px] font-semibold animation-easein-slow shift-to-right flex flex-col md:flex-row items-center"
-            href="/about/#leadership"
-          >
+          <Link className="nav-link group" href="/about/#leadership">
             Leadership
-            <div className="bg-[#f0eff2] p-2 rounded-full shadow-md md:ml-5">
-              <ArrowRightIcon className="w-5 h-5 text-red-500" />
+            <div className="nav-link-button">
+              <ArrowRightIcon className="nav-link-icon" />
+              <div className="nav-link-slide nav-link-slide--green"></div>
             </div>
           </Link>
         </div>

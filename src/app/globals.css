@@ -5,6 +5,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Brand colors */
+  --color-pro-green: #1da069;
+  --color-pro-blue: #4a65d6;
+  --color-pro-red: #c3201f;
+  --color-pro-iceblue: #7eb9e6;
+  --color-pro-ochre: #e8ad4f;
+  --color-pro-wine: #a5469a;
+  --color-pro-brown: #b93939;
+  --color-pro-grey: #5a5a5a;
+  --color-pro-brickred: #b93939;
+  --color-pro-white: #ffffff;
 }
 
 body {
@@ -99,7 +111,7 @@ body {
   background-image: url(/assets/home-football-black.jpg);
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: var(--color-pro-white);
 }
 
 .hr--block {
@@ -118,56 +130,56 @@ body {
 }
 
 .dot-green::after {
-  background-color: #1da069;
+  background-color: var(--color-pro-green);
 }
 
 .dot-iceblue::after {
-  background-color: #7eb9e6;
+  background-color: var(--color-pro-iceblue);
 }
 
 .dot-ochre::after {
-  background-color: #e8ad4f;
+  background-color: var(--color-pro-ochre);
 }
 
 .dot-wine::after {
-  background-color: #a5469a;
+  background-color: var(--color-pro-wine);
 }
 
 .dot-blue::after {
-  background-color: #4a65d6;
+  background-color: var(--color-pro-blue);
 }
 
 .dot-brown::after {
-  background-color: #b93939;
+  background-color: var(--color-pro-brown);
 }
 
 .dot-red::after {
-  background-color: #c3201f;
+  background-color: var(--color-pro-red);
 }
 
 .bg-blue {
-  background-color: #4a65d6;
-  color: #fff;
+  background-color: var(--color-pro-blue);
+  color: var(--color-pro-white);
 }
 
 .bg-brickred {
-  background-color: #b93939;
-  color: #fff;
+  background-color: var(--color-pro-brickred);
+  color: var(--color-pro-white);
 }
 
 .bg-green {
-  background-color: #1da069;
-  color: #fff;
+  background-color: var(--color-pro-green);
+  color: var(--color-pro-white);
 }
 
 .bg-grey {
-  background-color: #5a5a5a;
-  color: #fff;
+  background-color: var(--color-pro-grey);
+  color: var(--color-pro-white);
 }
 
 .bg-blue {
-  background-color: #4a65d6;
-  color: #fff;
+  background-color: var(--color-pro-blue);
+  color: var(--color-pro-white);
 }
 
 .radio-input[type='radio']:checked {
@@ -177,7 +189,7 @@ body {
 .radio-input[type='radio'] {
   -webkit-transform: scale(1.8);
   transform: scale(1.8);
-  accent-color: #4a65d6;
+  accent-color: var(--color-pro-blue);
   opacity: 0.7;
 }
 
@@ -202,7 +214,35 @@ body {
 }
 
 .primary-button {
-  @apply text-sm text-black rounded-full shadow-[0.1rem_0.2rem_0.5rem_rgba(0,0,0,0.15)] px-6 py-2.5 border-none animation-easein-slow shift-to-right;
+  @apply text-sm text-black rounded-full shadow-[0.1rem_0.2rem_0.5rem_rgba(0,0,0,0.15)] px-6 py-4 border-none transition-all;
+}
+
+.primary-button:hover {
+  @apply cursor-pointer bg-[var(--color-pro-red)] text-white;
+}
+
+.primary-button--red:hover {
+  @apply cursor-pointer bg-[var(--color-pro-red)] text-white;
+}
+
+.primary-button--blue:hover {
+  @apply cursor-pointer bg-[var(--color-pro-blue)] text-white;
+}
+
+.primary-button--green:hover {
+  @apply cursor-pointer bg-[var(--color-pro-green)] text-white;
+}
+
+.primary-button--ochre:hover {
+  @apply cursor-pointer bg-[var(--color-pro-ochre)] text-white;
+}
+
+.primary-button--iceblue:hover {
+  @apply cursor-pointer bg-[var(--color-pro-iceblue)] text-white;
+}
+
+.primary-button--wine:hover {
+  @apply cursor-pointer bg-[var(--color-pro-wine)] text-white;
 }
 
 @media (max-width: 991px) {
@@ -306,7 +346,7 @@ code {
 
 .blog--description a {
   text-decoration: underline !important;
-  color: #4a65d6;
+  color: var(--color-pro-blue);
   text-decoration: none;
   transition: all ease 0.3s;
 }
@@ -376,4 +416,46 @@ pre code {
     padding-bottom: 1.25rem !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
+}
+
+/* Base nav-link styles */
+.nav-link {
+  @apply text-[1.375rem] tracking-[-0.9px] font-semibold hover:translate-x-1 transition-transform duration-300 ease-out flex flex-col md:flex-row items-center;
+  position: relative;
+}
+
+.nav-link-button {
+  @apply bg-[#f0eff2] p-2 rounded-full shadow-md md:ml-5 relative overflow-hidden;
+}
+
+.nav-link-icon {
+  @apply w-5 h-5 text-black transition-colors duration-300 ease-out relative z-10;
+}
+
+.nav-link-slide {
+  @apply absolute inset-0 transform -translate-x-full transition-transform duration-300 ease-out;
+}
+
+.nav-link-slide--red {
+  @apply bg-red-500;
+}
+
+.nav-link-slide--blue {
+  @apply bg-blue-500;
+}
+
+.nav-link-slide--green {
+  @apply bg-green-500;
+}
+
+.group:hover .nav-link-button {
+  @apply bg-transparent;
+}
+
+.group:hover .nav-link-icon {
+  @apply text-white;
+}
+
+.group:hover .nav-link-slide {
+  @apply translate-x-0;
 }

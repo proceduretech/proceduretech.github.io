@@ -1,17 +1,30 @@
 'use client'
 
+import { ArrowRightIcon } from '@heroicons/react/16/solid'
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 const style = {
   dark: {
-    input: 'bg-black text-white/50 border-white/30',
-    button: 'bg-white',
+    input: 'text-white border-grey',
+    button: 'bg-white text-black',
+    option: {
+      'Design Team': 'bg-blue-500 text-white',
+      'Tech Team': 'bg-green-500 text-white',
+      Other: 'bg-red-500 text-white',
+    },
+    fileText: 'text-white',
   },
   light: {
-    input: 'input-white bg-white text-[#212529] border-[#249F6B]',
-    button: 'bg-green-600/50',
+    input: 'text-black border-black',
+    button: 'bg-green-600/50 text-black',
+    option: {
+      'Design Team': 'bg-blue-500 text-black',
+      'Tech Team': 'bg-green-500 text-black',
+      Other: 'bg-red-500 text-black',
+    },
+    fileText: 'text-black',
   },
 }
 
@@ -31,35 +44,30 @@ const JoinProcedure = ({ type = 'light' }: JoinProcedureProps) => {
   return (
     <>
       <p className="max-w-[56.25rem] mb-7 font-light opacity-80 tracking-tight">
-        From brainstorm sessions to happy hours, there’s never a dull moment in
-        the exciting and flexible work environment we’ve created. Send us your
-        resume to know opportunities for going Pro and stay in touch, you never
-        know when we might need your Pro-power.
+        From brainstorm sessions to happy hours, there&apos;s never a dull
+        moment in the exciting and flexible work environment we&apos;ve created.
+        Send us your resume to know opportunities for going Pro and stay in
+        touch, you never know when we might need your Pro-power.
       </p>
       <div>
         <form className="max-w-[46.25rem]">
           <div className="mb-7">
-            <div className="flex flex-wrap sm:flex-nowrap ml-1.5 -mb-5 sm:ml-0 sm:mb-0 justify-between">
-              <span className="relative">
-                <span className="flex flex-col sm:block">
-                  {options.map(option => (
-                    <span key={option} className="inline-block ml-2.5">
-                      <label className="mb-5 sm:mb-0 block w-full mr-8 sm:inline-block">
-                        <input
-                          checked={selectedOption === option}
-                          type="radio"
-                          name="options"
-                          value={option}
-                          className="radio-input mr-2.5"
-                          onChange={() => handleOptionChange(option)}
-                        />
-                        <span className="opacity-80 ml-2">{option}</span>
-                      </label>
-                    </span>
-                  ))}
-                </span>
-              </span>
-            </div>
+            {options.map(option => (
+              <button
+                key={option}
+                type="button"
+                onClick={() => handleOptionChange(option)}
+                className={twMerge(
+                  'px-4 py-2 rounded-full transition-all duration-200 text-sm',
+                  selectedOption === option &&
+                    style[type].option[
+                      option as keyof typeof style.light.option
+                    ]
+                )}
+              >
+                {option}
+              </button>
+            ))}
           </div>
           <div className="mb-7">
             <div className="max-w-[31.25rem] relative">
@@ -67,7 +75,10 @@ const JoinProcedure = ({ type = 'light' }: JoinProcedureProps) => {
                 <input
                   size={40}
                   className={twMerge(
-                    'file-upload-input cursor-pointer border py-2 px-5 rounded-full w-full',
+                    'file-upload-input cursor-pointer border py-2.5 px-5 rounded-full w-full text-sm',
+                    'file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0',
+                    `file:text-sm file:bg-transparent file:${style[type].fileText}`,
+                    'hover:file:bg-gray-300 file:cursor-pointer',
                     style[type].input
                   )}
                   type="file"
@@ -85,11 +96,12 @@ const JoinProcedure = ({ type = 'light' }: JoinProcedureProps) => {
           </div>
           <button
             className={twMerge(
-              'text-sm text-black rounded-full shadow-md px-6 py-2.5 border-none animation-easein-slow shift-to-right',
+              'text-sm rounded-full shadow-md px-6 py-2.5 border-none animation-easein primary-button--green flex items-center gap-2',
               style[type].button
             )}
           >
-            Go
+            Submit
+            <ArrowRightIcon className="nav-link-icon" />
           </button>
         </form>
       </div>

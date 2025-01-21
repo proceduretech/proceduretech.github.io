@@ -22,18 +22,21 @@ const links = [
     description:
       'Services to help you make the right decisions to achieve business goals',
     href: '/capabilities/#think',
+    navLinkSlide: 'nav-link-slide--red',
   },
   {
     title: 'Build',
     description:
       'We build products faster and better to deliver right to your customers',
     href: '/capabilities/#build',
+    navLinkSlide: 'nav-link-slide--blue',
   },
   {
     title: 'Measure',
     description:
       'We continually track how well our strategies and products are work',
     href: '/capabilities/#measure',
+    navLinkSlide: 'nav-link-slide--green',
   },
 ]
 
@@ -65,7 +68,7 @@ const AgileDeliverySection = () => {
                 <Link
                   key={index}
                   className={twMerge(
-                    'border-t flex items-end py-5 justify-between text-black border-b border-b-black/10 animation-easein-slow shift-to-right',
+                    'border-t flex items-end py-5 justify-between text-black border-b border-b-black/10 animation-easein-slow shift-to-right nav-link group',
                     index === 0 ? 'border-t-black/10' : ''
                   )}
                   href={link.href}
@@ -75,8 +78,9 @@ const AgileDeliverySection = () => {
                     <h6 className="font-medium mb-1">{link.description}</h6>
                   </div>
                   <div className="ml-10 mb-5 mr-5 relative left-0">
-                    <div className="p-2 rounded-full shadow-md">
-                      <ArrowRightIcon className="w-5 h-5 text-red-500" />
+                    <div className="nav-link-button">
+                      <ArrowRightIcon className="nav-link-icon" />
+                      <div className={`nav-link-slide ${link.navLinkSlide}`} />
                     </div>
                   </div>
                 </Link>

@@ -3,6 +3,14 @@ import Link from 'next/link'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
+const buttonColors = new Map([
+  ['dot-green', 'primary-button--green'],
+  ['dot-ochre', 'primary-button--ochre'],
+  ['dot-iceblue', 'primary-button--iceblue'],
+  ['dot-red', 'primary-button--red'],
+  ['dot-wine', 'primary-button--wine'],
+])
+
 const IndustriesType = () => {
   return (
     <section className="mb-28">
@@ -17,7 +25,12 @@ const IndustriesType = () => {
                 {data.title}
               </h3>
               <p className="mt-5 mb-9">{data.description}</p>
-              <Link className="primary-button bg-white" href={data.href}>
+              <Link
+                className={`primary-button bg-white ${buttonColors.get(
+                  data.color
+                )}`}
+                href={data.href}
+              >
                 Explore
               </Link>
             </div>

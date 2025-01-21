@@ -8,7 +8,7 @@ const cardStyles = {
   colored: {
     container: 'text-white',
     input: 'border-[#dee2e6]',
-    button: 'bg-white',
+    button: 'bg-white primary-button--blue',
   },
   transparent: {
     container: '-mb-5 text-[#212529] pt-[7vw] pb-0',
@@ -86,7 +86,7 @@ const Consultation = ({
                   cardStyles[type].button
                 )}
               >
-                Go
+                Connect
               </button>
             </div>
           </form>
