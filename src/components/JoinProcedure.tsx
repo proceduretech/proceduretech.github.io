@@ -14,7 +14,7 @@ const style = {
       'Tech Team': 'bg-green-500 text-white',
       Other: 'bg-red-500 text-white',
     },
-    fileText: 'text-white',
+    fileText: 'text-white-500',
   },
   light: {
     input: 'text-black border-black',
@@ -77,7 +77,8 @@ const JoinProcedure = ({ type = 'light' }: JoinProcedureProps) => {
                   className={twMerge(
                     'file-upload-input cursor-pointer border py-2.5 px-5 rounded-full w-full text-sm',
                     'file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0',
-                    `file:text-sm file:bg-transparent file:${style[type].fileText}`,
+                    'file:text-sm file:bg-transparent',
+                    style[type].fileText.replace('text-', 'file:text-'),
                     'hover:file:bg-gray-300 file:cursor-pointer',
                     style[type].input
                   )}

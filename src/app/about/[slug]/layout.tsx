@@ -35,13 +35,13 @@ const Layout = ({
           />
           <div className="absolute top-0 left-0 pt-16 max-w-16 z-5 pl-[7vw] flex flex-col sm:flex-row">
             <Link
-              className="text-sm font-semibold mr-10 mb-5 sm:mb-10 w-44 bg-white text-black rounded-full shadow-[0.1rem_0.2rem_0.5rem_rgba(0,0,0,0.15)] px-6 py-2.5 border-none animation-easein-slow shift-to-right"
+              className="team-button animation-easein primary-button primary-button--blue"
               href="/contact/#consult"
             >
               Culture@Procedure
             </Link>
             <Link
-              className="text-sm font-semibold mr-10 mb-5 sm:mb-10 w-44 bg-white text-black rounded-full shadow-[0.1rem_0.2rem_0.5rem_rgba(0,0,0,0.15)] px-6 py-2.5 border-none animation-easein-slow shift-to-right"
+              className="team-button animation-easein primary-button primary-button--green"
               href="/contact/#consult"
             >
               Team@Procedure

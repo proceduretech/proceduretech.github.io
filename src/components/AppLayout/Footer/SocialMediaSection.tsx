@@ -32,17 +32,17 @@ const socialLinks = [
 const SocialMediaSection = () => {
   return (
     <>
-      <h5 className="text-xl mb-12 font-medium leading-[1.2]">Connect</h5>
+      <h5 className="text-xl mb-12 font-bold leading-[1.2]">Connect</h5>
       <ul className="-mt-8 pt-2.5 flex space-x-3 list-none">
         {socialLinks.map((social, idx) => (
           <li key={idx} className="inline">
             <Link
-              className="w-9 inline-block animation-easein-slow shift-to-right"
+              className="w-9 inline-block animation-easein"
               href={social.href}
               target="_blank"
             >
               <Image
-                className="w-full align-middle"
+                className="w-full align-middle transition-transform hover:scale-110"
                 width={38}
                 height={38}
                 src={social.src}

@@ -3,6 +3,7 @@ import PageNavbar from '@/components/PageNavbar'
 import Link from 'next/link'
 import PageBackgroundImage from '@/components/PageBackgroundImage'
 import { Metadata } from 'next'
+import Consultation from '@/components/Consultation'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -38,81 +39,7 @@ const Contact = () => {
         />
       </section>
       <section>
-        <div className="mb-28 pr-[7vw] lg:pr-[calc(7vw*_3)]">
-          <div className="rounded-r-full -mb-5 pt-[7vw] text-[#212529]">
-            <div className="container-padding">
-              <h3 className="mt-5">Get a Free Consultation</h3>
-              <div>
-                <form className="max-w-xl pt-7 lg:pt-12">
-                  <div className="flex flex-wrap pr-12">
-                    <div className="w-full lg:w-6/12 mb-5 pr-5">
-                      <span data-name="email" className="relative block">
-                        <input
-                          size={40}
-                          maxLength={400}
-                          aria-required="true"
-                          aria-invalid="false"
-                          placeholder="Email"
-                          type="email"
-                          name="email"
-                          className="bg-white/80 w-full focus-visible:ring-0 focus:outline-0 focus:bg-white focus:border-[#86b7fe] focus:shadow text-black rounded-3xl text-sm h-auto py-2 px-5 bg-clip-padding border border-[#249F6B] placeholder:text-gray-800/75"
-                        />
-                      </span>
-                    </div>
-                    <div className="w-full lg:w-6/12 mb-5 pr-5">
-                      <span data-name="Phone" className="relative block">
-                        <input
-                          size={40}
-                          maxLength={400}
-                          aria-required="true"
-                          aria-invalid="false"
-                          placeholder="Phone"
-                          type="tel"
-                          name="Phone"
-                          className="bg-white/80 w-full focus-visible:ring-0 focus:outline-0 focus:bg-white focus:border-[#86b7fe] focus:shadow text-black rounded-3xl text-sm h-auto py-2 px-5 bg-clip-padding border border-[#249F6B] placeholder:text-gray-800/75"
-                        />
-                      </span>
-                    </div>
-                    <div className="w-full lg:w-6/12 mb-5 pr-5">
-                      <span data-name="Name" className="relative block">
-                        <input
-                          size={40}
-                          maxLength={400}
-                          aria-required="true"
-                          aria-invalid="false"
-                          placeholder="Name"
-                          type="text"
-                          name="Name"
-                          className="bg-white/80 w-full focus-visible:ring-0 focus:outline-0 focus:bg-white focus:border-[#86b7fe] focus:shadow text-black rounded-3xl text-sm h-auto py-2 px-5 bg-clip-padding border border-[#249F6B] placeholder:text-gray-800/75"
-                        />
-                      </span>
-                    </div>
-                    <div className="w-full lg:w-6/12 mb-5 pr-5">
-                      <span data-name="CompanyName" className="relative block">
-                        <input
-                          size={40}
-                          maxLength={400}
-                          aria-required="true"
-                          aria-invalid="false"
-                          placeholder="Company Name"
-                          type="text"
-                          name="CompanyName"
-                          className="bg-white/80 w-full focus-visible:ring-0 focus:outline-0 focus:bg-white focus:border-[#86b7fe] focus:shadow text-black rounded-3xl text-sm h-auto py-2 px-5 bg-clip-padding border border-[#249F6B] placeholder:text-gray-800/75"
-                        />
-                      </span>
-                    </div>
-                    <br />
-                    <div className="w-6/12 mb-5 pr-5">
-                      <button className="text-sm bg-green-600/50 text-black rounded-full shadow-[0.1rem_0.2rem_0.5rem_rgba(0,0,0,0.15)] px-6 py-2.5 border-none animation-easein-slow shift-to-right mt-5">
-                        Go
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Consultation type="colored" backgroundColor="#c3201f" />
       </section>
       <section className="mb-28 relative">
         <div className="pl-[7vw]">
@@ -139,13 +66,13 @@ const Contact = () => {
               </h4>
               <div className="flex flex-col sm:flex-row">
                 <Link
-                  className="text-sm font-semibold ml-5 sm:mr-10 mb-5 sm:mb-10 w-44 bg-white text-black rounded-full shadow-[0.1rem_0.2rem_0.5rem_rgba(0,0,0,0.15)] px-6 py-2.5 border-none animation-easein-slow shift-to-right"
+                  className="team-button animation-easein primary-button primary-button--blue"
                   href="/contact/#consult"
                 >
                   Culture@Procedure
                 </Link>
                 <Link
-                  className="text-sm font-semibold ml-5 sm:mr-10 mb-5 sm:mb-10 w-44 bg-white text-black rounded-full shadow-[0.1rem_0.2rem_0.5rem_rgba(0,0,0,0.15)] px-6 py-2.5 border-none animation-easein-slow shift-to-right"
+                  className="team-button animation-easein primary-button primary-button--green"
                   href="/contact/#consult"
                 >
                   Team@Procedure

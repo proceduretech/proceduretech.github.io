@@ -459,3 +459,11 @@ pre code {
 .group:hover .nav-link-slide {
   @apply translate-x-0;
 }
+
+.footer-link {
+  @apply transition-all ease-in hover:text-[var(--color-pro-iceblue)];
+}
+
+.team-button {
+  @apply text-sm font-semibold mr-10 mb-5 sm:mb-10 w-44 bg-white text-black rounded-full shadow-[0.1rem_0.2rem_0.5rem_rgba(0,0,0,0.15)] px-6 py-2.5 border-none flex items-center justify-center;
+}

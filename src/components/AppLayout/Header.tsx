@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { MagnifyingGlassIcon } from '@heroicons/react/16/solid'
+// import { MagnifyingGlassIcon } from '@heroicons/react/16/solid'
 import { usePathname } from 'next/navigation'
 import { Bars3Icon } from '@heroicons/react/24/outline'
 import { twMerge } from 'tailwind-merge'
@@ -134,9 +134,10 @@ const Header = () => {
                 alt={'Procedure Logo'}
               />
             </Link>
-            <a className="group lg:hidden animation-easein-slow absolute right-12 -top-1.5 py-4 px-5 z-20 cursor-pointer">
+            {/* // Search is not Functional yet */}
+            {/* <a className="group lg:hidden animation-easein absolute right-12 -top-1.5 py-4 px-5 z-20 cursor-pointer">
               <MagnifyingGlassIcon className="text-black/90 w-7 h-7 group-hover:text-black/65" />
-            </a>
+            </a> */}
             <button
               onClick={() => setIsNavbarOpen(prev => !prev)}
               className="-mr-[5vw] h-full flex lg:hidden justify-center items-center mt-1"
@@ -182,7 +183,7 @@ const Header = () => {
                         <ul key={`items-${index}`} className="block">
                           <li className="w-full">
                             <Link
-                              className="text-white bg-none text-sm font-light py-1.5 px-5 shift-to-right capitalize"
+                              className="text-white hover:text-gray-300 bg-none text-sm font-light py-1.5 px-5 capitalize"
                               href={`/${navLink.id}`}
                               onClick={handleMouseLeave}
                             >
@@ -210,7 +211,7 @@ const Header = () => {
                           {data.items.map(item => (
                             <li key={item.title}>
                               <Link
-                                className="block text-white bg-none text-sm font-light py-1.5 px-5 animation-easein-slow shift-to-right whitespace-nowrap"
+                                className="block text-white bg-none hover:text-gray-300 text-sm font-light py-1.5 px-5 animation-easein whitespace-nowrap"
                                 href={item.href}
                                 onClick={handleMouseLeave}
                               >
@@ -224,11 +225,12 @@ const Header = () => {
                   )}
                 </li>
               ))}
-              <li className="ml-2 flex cursor-pointer group justify-center items-center">
-                <a className="no-underline animation-easein-slow">
+              {/* // Search is not Functional yet */}
+              {/* <li className="ml-2 flex cursor-pointer group justify-center items-center">
+                <a className="no-underline animation-easein">
                   <MagnifyingGlassIcon className="text-black/90 w-5 h-5 group-hover:text-black/65" />
                 </a>
-              </li>
+              </li> */}
             </div>
           </div>
           {isNavbarOpen && (
@@ -248,7 +250,7 @@ const Header = () => {
                       href={navLink.href ?? '/'}
                     >
                       <span
-                        className={`inline-block animation-easein-slow m-0 leading-7`}
+                        className={`inline-block animation-easein m-0 leading-7`}
                       >
                         {navLink.title}
                       </span>
@@ -259,7 +261,7 @@ const Header = () => {
                           <ul key={`items-${index}`} className="block">
                             <li className="w-full">
                               <Link
-                                className="text-white bg-none text-sm font-light py-1.5 animation-easein-slow shift-to-right capitalize"
+                                className="text-white hover:text-gray-300 bg-none text-sm font-light py-1.5 px-5 capitalize"
                                 href={`/${navLink.id}`}
                                 onClick={() => {
                                   handleMouseLeave()
@@ -290,7 +292,7 @@ const Header = () => {
                             {data.items.map(item => (
                               <li key={item.title}>
                                 <Link
-                                  className="block text-white bg-none text-sm font-light py-1.5 animation-easein-slow shift-to-right whitespace-nowrap"
+                                  className="block text-white bg-none text-sm font-light hover:text-gray-300 py-1.5 animation-easein whitespace-nowrap"
                                   href={item.href}
                                   onClick={() => {
                                     handleMouseLeave()

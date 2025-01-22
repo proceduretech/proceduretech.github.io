@@ -126,7 +126,7 @@ const LifeProcedure = () => {
         </div>
       </section>
       <section className="-mt-24 lg:mt-0 mb-28">
-        {cardData.map(data => (
+        {cardData.map((data, index) => (
           <div
             key={data.title}
             className={twMerge(
@@ -141,7 +141,13 @@ const LifeProcedure = () => {
               </p>
               {data.href && data.buttonName && (
                 <Link
-                  className="text-sm w-48 bg-white text-black rounded-full shadow-[0.1rem_0.2rem_0.5rem_rgba(0,0,0,0.15)] px-6 py-2.5 border-none animation-easein-slow shift-to-right"
+                  className={`text-sm w-48 bg-white text-black rounded-full shadow-[0.1rem_0.2rem_0.5rem_rgba(0,0,0,0.15)] px-6 py-2.5 border-none animation-easein primary-button ${
+                    index === 0
+                      ? 'primary-button--green'
+                      : index === 1
+                      ? 'primary-button--blue'
+                      : 'primary-button--red'
+                  }`}
                   href={data.href}
                 >
                   {data.buttonName}

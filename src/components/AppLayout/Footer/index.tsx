@@ -11,34 +11,25 @@ const Footer = () => {
         <div className="container-padding">
           <div className="flex flex-wrap lg:flex-nowrap">
             <div className="w-full sm:w-6/12 mt-10 lg:w-3/12 lg:mt-0">
-              <h5 className="text-xl mb-12 font-medium leading-[1.2]">
-                <Link
-                  className="animation-easein-slow shift-to-right"
-                  href={'/'}
-                >
+              <h3 className="text-xl mb-10 font-medium leading-[1.2]">
+                <Link className="footer-link font-bold" href={'/'}>
                   Home
                 </Link>
-              </h5>
-              <h5 className="text-xl mb-12 font-medium leading-[1.2]">
-                <Link
-                  className="animation-easein-slow shift-to-right"
-                  href={'/about'}
-                >
+              </h3>
+              <h3 className="text-xl mb-10 font-medium leading-[1.2]">
+                <Link className="footer-link font-bold" href={'/about'}>
                   About
                 </Link>
-              </h5>
-              <h5 className="text-xl mb-12 font-medium leading-[1.2]">
-                <Link
-                  className="animation-easein-slow shift-to-right"
-                  href={'/lifeprocedure'}
-                >
+              </h3>
+              <h3 className="text-xl mb-10 font-medium leading-[1.2]">
+                <Link className="footer-link font-bold" href={'/lifeprocedure'}>
                   Life@Procedure
                 </Link>
-              </h5>
-              <ul className="-mt-8 flex flex-col space-y-2 list-none">
+              </h3>
+              <ul className="text-sm -mt-8 flex flex-col space-y-2 list-none">
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/lifeprocedure/cultureprocedure/"
                   >
                     Culture@Procedure
@@ -46,7 +37,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/lifeprocedure/cultureprocedure/"
                   >
                     Team@Procedure
@@ -55,21 +46,18 @@ const Footer = () => {
               </ul>
             </div>
             <div className="w-full sm:w-6/12 mt-10 lg:w-3/12 lg:mt-0">
-              <h5 className="text-xl mb-12 font-medium leading-[1.2]">
-                <Link
-                  className="animation-easein-slow shift-to-right"
-                  href={'/capabilities'}
-                >
+              <h3 className="text-xl mb-10 font-medium leading-[1.2]">
+                <Link className="footer-link font-bold" href={'/capabilities'}>
                   Capabilities
                 </Link>
-              </h5>
-              <ul className="-mt-8 flex flex-col space-y-2 list-none">
-                <li className="text-sm leading-7 text-[#AFAFAF] font-medium pt-5">
+              </h3>
+              <ul className="text-sm -mt-8 flex flex-col space-y-2 list-none">
+                <li className="text-xl leading-7 text-[#AFAFAF] font-bold pt-5">
                   Think
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/capabilities/digital-ventures/"
                   >
                     Digital Ventures
@@ -77,23 +65,20 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/capabilities/innovation/"
                   >
                     Innovation
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="animation-easein-slow shift-to-right"
-                    href="/capabilities/ux-ui/"
-                  >
+                  <Link className="footer-link" href="/capabilities/ux-ui/">
                     UX & UI
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/capabilities/dx-modernization/"
                   >
                     DX & Modernization
@@ -101,52 +86,43 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/capabilities/process-consulting/"
                   >
                     Process Consulting
                   </Link>
                 </li>
               </ul>
-              <ul className="flex flex-col space-y-2 list-none">
-                <li className="text-sm leading-7 text-[#AFAFAF] font-medium pt-5">
+              <ul className="text-sm flex flex-col space-y-2 list-none">
+                <li className="text-xl leading-7 text-[#AFAFAF] font-bold pt-5">
                   Build
                 </li>
                 <li>
-                  <Link
-                    className="animation-easein-slow shift-to-right"
-                    href="/capabilities/agile/"
-                  >
+                  <Link className="footer-link" href="/capabilities/agile/">
                     Agile
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/capabilities/app-development/"
                   >
                     App Development
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="animation-easein-slow shift-to-right"
-                    href="/capabilities/cloud/"
-                  >
+                  <Link className="footer-link" href="/capabilities/cloud/">
                     Cloud
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="animation-easein-slow shift-to-right"
-                    href="/capabilities/devops/"
-                  >
+                  <Link className="footer-link" href="/capabilities/devops/">
                     DevOps
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/capabilities/product-engineering/"
                   >
                     Product Engineering
@@ -154,7 +130,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/capabilities/managed-services/"
                   >
                     Managed Services
@@ -162,7 +138,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/capabilities/mobile-solutions/"
                   >
                     Mobile Solutions
@@ -170,28 +146,25 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/capabilities/swat-interventions/"
                   >
                     SWAT Interventions
                   </Link>
                 </li>
               </ul>
-              <ul className="flex flex-col space-y-2 list-none">
-                <li className="text-sm leading-7 text-[#AFAFAF] font-medium pt-5">
+              <ul className="text-sm flex flex-col space-y-2 list-none">
+                <li className="text-xl leading-7 text-[#AFAFAF] font-bold pt-5">
                   Measure
                 </li>
                 <li>
-                  <Link
-                    className="animation-easein-slow shift-to-right"
-                    href="/capabilities/security/"
-                  >
+                  <Link className="footer-link" href="/capabilities/security/">
                     Security
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/capabilities/performance-governance/"
                   >
                     Performance Governance
@@ -199,7 +172,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/capabilities/quality-testing/"
                   >
                     Quality & Testing
@@ -208,97 +181,68 @@ const Footer = () => {
               </ul>
             </div>
             <div className="w-full sm:w-6/12 mt-10 lg:w-3/12 lg:mt-0 space-y-12">
-              <h5 className="text-xl font-medium leading-[1.2] mb-12">
-                <Link
-                  className="animation-easein-slow shift-to-right"
-                  href="/industries/"
-                >
+              <h3 className="text-xl font-bold leading-[1.2] mb-10">
+                <Link className="footer-link" href="/industries/">
                   Industries
                 </Link>
-              </h5>
-              <ul className="!-mt-8 flex flex-col space-y-2 list-none">
+              </h3>
+              <ul className="!text-sm -mt-8 flex flex-col space-y-2 list-none">
                 <li>
-                  <Link
-                    className="animation-easein-slow shift-to-right"
-                    href="/industries/banking/"
-                  >
+                  <Link className="footer-link" href="/industries/banking/">
                     Banking
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="animation-easein-slow shift-to-right"
-                    href="/industries/edtech/"
-                  >
+                  <Link className="footer-link" href="/industries/edtech/">
                     EdTech
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="animation-easein-slow shift-to-right"
-                    href="/industries/fintech/"
-                  >
+                  <Link className="footer-link" href="/industries/fintech/">
                     FinTech
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="animation-easein-slow shift-to-right"
-                    href="/industries/foodtech/"
-                  >
+                  <Link className="footer-link" href="/industries/foodtech/">
                     FoodTech
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="animation-easein-slow shift-to-right"
-                    href="/industries/insurtech/"
-                  >
+                  <Link className="footer-link" href="/industries/insurtech/">
                     InsurTech
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="animation-easein-slow shift-to-right"
+                    className="footer-link"
                     href="/industries/case-studies/"
                   >
                     Case Studies
                   </Link>
                 </li>
               </ul>
-              <h5 className="text-xl font-medium leading-[1.2]">
-                <Link
-                  className="animation-easein-slow shift-to-right"
-                  href="/resources/"
-                >
+              <h3 className="text-xl font-bold leading-[1.2]">
+                <Link className="footer-link" href="/resources/">
                   Resources
                 </Link>
-              </h5>
-              <h5 className="text-xl font-medium leading-[1.2]">
-                <Link
-                  className="animation-easein-slow shift-to-right"
-                  href="/contact/"
-                >
+              </h3>
+              <h3 className="text-xl font-bold leading-[1.2]">
+                <Link className="footer-link" href="/contact/">
                   Contact Us
                 </Link>
-              </h5>
-              <ul className="-mt-8 flex flex-col list-none">
-                <li>
-                  <Link
-                    className="animation-easein-slow shift-to-right"
-                    href="/privacy-policy/"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-              </ul>
+              </h3>
+              <h3 className="text-xl font-bold leading-[1.2]">
+                <Link className="footer-link font-bold" href="/privacy-policy/">
+                  Privacy Policy
+                </Link>
+              </h3>
             </div>
             <div className="w-full sm:w-6/12 mt-10 lg:w-3/12 lg:mt-0">
               <SocialMediaSection />
               <Newsletter />
-              <h5 className="text-xl mb-12 font-medium leading-[1.2]">
+              <h3 className="text-xl mb-10 font-bold leading-[1.2]">
                 Visit Us
-              </h5>
+              </h3>
               <p className="-mt-8 leading-5 font-light text-sm">
                 406, Shrishti Square, Above Bata Showroom, LBS Marg, Sonapur,
                 Bhandup West, Mumbai, <br /> Maharashtra 400078 <br /> INDIA

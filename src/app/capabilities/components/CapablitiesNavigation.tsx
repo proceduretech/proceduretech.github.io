@@ -2,7 +2,7 @@ import { capabilitiesData } from '@/constants/constant'
 import Link from 'next/link'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
-import Image from 'next/image'
+import { ArrowRightIcon } from '@heroicons/react/16/solid'
 
 const CapabilitiesNavigation = () => {
   return (
@@ -14,7 +14,14 @@ const CapabilitiesNavigation = () => {
         >
           <h2
             className={twMerge(
-              `text-5xl text-gray-500 font-bold mb-9 dot capitalize after:bg-[#7EB9E6]`
+              'text-5xl text-gray-500 font-bold mb-9 dot',
+              `${
+                data.title === 'think'
+                  ? 'dot-red'
+                  : data.title === 'build'
+                  ? 'dot-blue'
+                  : 'dot-green'
+              }`
             )}
           >
             {data.title}
@@ -23,18 +30,25 @@ const CapabilitiesNavigation = () => {
             {data.items.map(item => (
               <li className="group relative" key={item.title}>
                 <Link
-                  className="text-black w-full text-2xl font-light block py-2.5 pr-12 border-b border-b-black/10 animation-easein-slow shift-to-right bg-white"
+                  className="nav-link text-black w-full text-2xl font-light block py-2.5 pr-12 border-b border-b-black/10"
                   href={item.href}
                 >
-                  {item.title}
+                  <div className="flex justify-between items-center w-full">
+                    {item.title}
+                    <div className="nav-link-button opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                      <ArrowRightIcon className="nav-link-icon" />
+                      <div
+                        className={`nav-link-slide translate-x-full group-hover:translate-x-0 transition-transform duration-500 ${
+                          data.title === 'think'
+                            ? 'nav-link-slide--red'
+                            : data.title === 'build'
+                            ? 'nav-link-slide--blue'
+                            : 'nav-link-slide--green'
+                        }`}
+                      />
+                    </div>
+                  </div>
                 </Link>
-                <Image
-                  className="block lg:hidden top-0 right-0 absolute group-hover:block"
-                  width={49}
-                  height={49}
-                  src="/assets/arrow-button.svg"
-                  alt="pointer"
-                />
               </li>
             ))}
           </ul>

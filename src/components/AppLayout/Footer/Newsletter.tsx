@@ -3,13 +3,11 @@ import React from 'react'
 const Newsletter = () => {
   return (
     <>
-      <h5 className="text-xl mt-12 mb-3 font-medium leading-[1.2]">
-        Newsletter
-      </h5>
+      <h5 className="text-xl mt-12 mb-3 font-bold leading-[1.2]">Newsletter</h5>
       <div>
         <div>
           <form className="pb-14">
-            <label className="text-white/40 mb-1.5 inline-block" htmlFor="name">
+            <label className="text-white mb-1.5 inline-block" htmlFor="name">
               Name
             </label>
             <span className="relative">
@@ -21,10 +19,7 @@ const Newsletter = () => {
                 className="w-full bg-white border border-[#dee2e6] h-full rounded-md py-1.5 px-2.5 text-[#3850B4] text-xl mb-2.5"
               />
             </span>
-            <label
-              className="text-white/40 mb-1.5 inline-block"
-              htmlFor="email"
-            >
+            <label className="text-white mb-1.5 inline-block" htmlFor="email">
               Email
             </label>
             <span className="relative">

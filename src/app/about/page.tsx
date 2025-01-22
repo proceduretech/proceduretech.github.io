@@ -49,8 +49,8 @@ const About = () => {
         title="Our Story"
       />
       <TeamsData />
-      <section>
-        <Consultation type="transparent" />
+      <section className="mt-12">
+        <Consultation type="colored" backgroundColor="#c3201f" />
       </section>
     </>
   )
